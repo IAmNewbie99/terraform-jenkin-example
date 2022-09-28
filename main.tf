@@ -5,7 +5,7 @@ terraform {
     region         = "us-west-2"
     encrypt        = true
     role_arn       = "arn:aws:iam::188289434504:role/Myuniqueterraform-SeriesS3BackendRole"
-    dynamodb_table = "terraform-series-s3-backend"
+    dynamodb_table = "myuniqueterraform-series-s3-backend"
   }
 }
 
@@ -26,7 +26,7 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "server" {
   ami           = data.aws_ami.ami.id
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
 
   lifecycle {
     create_before_destroy = true
