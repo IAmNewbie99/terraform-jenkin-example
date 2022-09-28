@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Init Provider') {
       steps {
-        bat 'terraform init'
+        bat 'terraform init -reconfigure'
       }
     }
     stage('Plan Resources') {
