@@ -26,7 +26,7 @@ pipeline {
         message "Do you want to proceed for production deployment?"
       }
       steps {
-        sh 'terraform apply -auto-approve'
+        bat 'terraform apply -auto-approve'
       }
     }
   }
