@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "terraform-series-s3-backend"
+    bucket         = "myuniqueterraform-series-s3-backend"
     key            = "terraform-jenkins"
     region         = "us-west-2"
     encrypt        = true
