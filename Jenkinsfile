@@ -13,12 +13,12 @@ pipeline {
   stages {
     stage('Init Provider') {
       steps {
-        sh 'terraform init'
+        bat 'terraform init'
       }
     }
     stage('Plan Resources') {
       steps {
-        sh 'terraform plan'
+        bat 'terraform plan'
       }
     }
     stage('Apply Resources') {
